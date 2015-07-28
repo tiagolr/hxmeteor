@@ -1,0 +1,3 @@
+-lib hxmeteor
+-main Client
+-js www/client/clock.js
