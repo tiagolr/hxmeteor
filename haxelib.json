@@ -1,6 +1,6 @@
 {
 	"name": "hxmeteor",
-	"url" : "https://github.com/ProG4mr/meteor-hx",
+	"url" : "https://github.com/ProG4mr/hxmeteor",
 	"license": "MIT",
 	"tags": ["javascript", "meteor", "isomorphic", "client", "server"],
 	"description": "Bindings and tools to use meteor.js with haxe.",
