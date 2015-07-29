@@ -1,0 +1,25 @@
+<template name="pagetwo">
+	<div class="row">
+		<div class="col-xs-4 col-xs-offset-1">
+			
+			<div class="input-group">
+				<form class="new-task">
+					<input class="form-control" type="text" name="text" placeholder="Type to add new entries" />
+				</form>
+				<div class="input-group-btn">
+					<button class="btn btn-default btn-danger">Clear Entries</button>
+				</div>
+			</div>
+			
+			<hr/>
+			{{#each tasks}}
+			{{> task}}
+			{{/each}}
+		</div>
+	</div>
+</template>
+	
+<template name="task">
+	<p>{{text}}</p>
+</template>
+
