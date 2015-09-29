@@ -26,6 +26,7 @@ typedef OnConnect = {
 
 @:native('Meteor')
 extern class Meteor {
+	
 	static var isClient(default,null):Bool;
 	static var isServer(default, null):Bool;
 	static var isCordova(default, null):Bool;
@@ -35,6 +36,10 @@ extern class Meteor {
 	static function startup(cb:Void->Void):Void;
 	static function wrapAsync(cb:Dynamic->Void, ?ctx:Dynamic):Void;
 	static function absoluteUrl(?path:String, ?options: { ?secure:Bool, replaceLocalhost:Bool, rootUrl:Bool } ):String;
+	
+	@:overload(function (name:String, func:Dynamic->Dynamic):Dynamic{})
+	@:overload(function (name:String, func:Dynamic->Dynamic->Dynamic):Dynamic{})
+	@:overload(function (name:String, func:Void->Void):Dynamic{})
 	static function publish(name:String, func:Void->Dynamic):Dynamic;
 	
 	// Subscribe to a record set. Returns a handle that provides stop() and ready() methods.
