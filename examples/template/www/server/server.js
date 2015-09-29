@@ -23,8 +23,6 @@ var Shared = function() { };
 Shared.init = function() {
 	model_Tasks.init();
 	AppRouter.init();
-	if(model_Tasks.collection.find().count() == 0) {
-	}
 };
 var model_Tasks = function() { };
 model_Tasks.init = function() {

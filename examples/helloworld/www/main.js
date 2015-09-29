@@ -12,7 +12,6 @@ Main.main = function() {
 	}
 	if(Meteor.isServer) Meteor.startup(function() {
 	});
-	console.log("FUCK");
 };
 Main.main();
 })(typeof console != "undefined" ? console : {log:function(){}});
