@@ -31,5 +31,7 @@ extern class FlowRouter {
 	static function initialize():Void;
 	static function onRouteRegister(cb:Dynamic->Void):Void;
 	static function subsReady(?name:String, ?cb:Void->Void):Bool;
+	
+	static var notFound:RouteOptions;
 }
 

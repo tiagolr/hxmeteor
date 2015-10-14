@@ -4,7 +4,7 @@
 	"license": "MIT",
 	"tags": ["javascript", "meteor", "isomorphic", "client", "server"],
 	"description": "Bindings and tools to use meteor.js with haxe.",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"classPath": "src",
 	"releasenote": "First",
 	"contributors": ["prog4mr"]

@@ -41,14 +41,7 @@ typedef SchemaField = {
 typedef SchemaDef = Dynamic<SchemaField>;
 
 typedef AttachSchemaOptions = {
-	// If your validation requires that your doc be transformed using the 
-	// collection's transform function prior to being validated, 
-	// then you must pass the transform: true option to attachSchema when you attach the schema:
 	?transform:Bool,
-	
-	// By default, if a collection already has a schema attached, attachSchema will combine 
-	// the new schema with the existing. Pass the replace: true option to attachSchema to 
-	// discard any existing schema.
 	?replace:Bool,
 }
 

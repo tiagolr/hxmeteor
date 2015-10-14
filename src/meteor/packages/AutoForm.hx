@@ -27,9 +27,15 @@ extern class AutoForm {
 
 	static function hooks( hooks:Dynamic<HooksObject> ):Void;
 	static function addHooks( formName:EitherType<String, Array<String>>, hook:HooksObject):Void;
+	static function resetForm(id:String):Void;
+	static function setDefaultTemplate(template:String):Void;
 	static function debug():Void;
 	static function validateField(formId:String, fieldName:String, skipEmpty:Bool):Bool;
-	//static function getFormValues
+	static function templateInstanceForForm(id:String):Template;
+	static function getFormValues(formId:String, ?template:Template, ?ss:SimpleSchema, ?getModifier:Bool):Dynamic;
+	static function getFieldValue(fieldName:String, ?formId:String):Dynamic;
+	
+	// TODO create externs for whole api: https://github.com/aldeed/meteor-autoform/blob/master/api.md
 }
 
 @:native('this')
