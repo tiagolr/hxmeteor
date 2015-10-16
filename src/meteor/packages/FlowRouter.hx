@@ -8,6 +8,14 @@ typedef RouteOptions = {
 	?action: Function,
 }
 
+typedef RouteObject = {
+	path:String,
+	params: Dynamic<String>,
+	queryParams:Dynamic<String>,
+	route: Dynamic,
+	oldRoute:Dynamic,
+}
+
 @:native('FlowRouter')
 extern class FlowRouter {
 	
@@ -23,7 +31,7 @@ extern class FlowRouter {
 	static function setParams(newParams: { } ):Void;
 	static function setQueryParams(newQueryParams: { } ):Void;
 	static function getRouteName():String;
-	static function current():FlowRouter;
+	static function current():RouteObject;
 	static function watchPathChange():Void;
 	static function withReplaceState(fn:Void->Void):Void;
 	static function reload():Void;

@@ -6,6 +6,7 @@ package meteor;
  */
 extern class Cursor{
 
+	
 	@:overload(function(cb:(Dynamic)->Void, ?thisArg:Dynamic):Void{})
 	@:overload(function(cb:(Dynamic->Int)->Void, ?thisArg:Dynamic):Void{})
 	function forEach(cb:(Dynamic->Int->Cursor)->Void, ?thisArg:Dynamic):Void;

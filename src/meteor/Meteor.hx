@@ -48,7 +48,7 @@ extern class Meteor {
 	static var isClient(default,null):Bool;
 	static var isServer(default, null):Bool;
 	static var isCordova(default, null):Bool;
-	static var settings(default, null): { };
+	static var settings(default, null): Dynamic;
 	static var release(default, null):String;
 	
 	static function startup(cb:Void->Void):Void;
