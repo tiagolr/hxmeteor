@@ -6,6 +6,6 @@
 	"description": "Bindings and tools to use meteor.js with haxe.",
 	"version": "0.2.0",
 	"classPath": "src",
-	"releasenote": "First",
+	"releasenote": "More fixes",
 	"contributors": ["prog4mr"]
 }
