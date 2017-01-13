@@ -1,11 +1,12 @@
 package meteor.packages;
+
 import haxe.Constraints.Function;
 import haxe.io.Path;
 
 /**
  * Meteor Iron:Router externs
  * https://github.com/iron-meteor/iron-router
- * 
+ *
  * @author TiagoLr
  */
 typedef RouterConfigs = {
@@ -17,7 +18,7 @@ typedef RouterConfigs = {
 }
 
 typedef RouteOptions = {
-	?name:String, 
+	?name:String,
 	?controller:String,
 	?template:String,
 	?layoutTemplate:String,
@@ -36,18 +37,20 @@ typedef RouteOptions = {
 
 @:native('Router')
 extern class IronRouter {
-	
+
 	static var routes:Dynamic; // access named routes
 
 	static function configure(configs: RouterConfigs ):Void;
+
 	@:overload(function(path:String, ?opts:RouteOptions):Void{})
 	static function route(path:String, cb:Dynamic, ?opts:RouteOptions):Dynamic; // TODO return Route with get,set and post methods
+
 	static function go(path:String, ?params: { }, ?opts: { ?query:String, ?hash:String } ):Void;
 	static function onBeforeAction(cb:Void->Void):Void;
 	static function onRerun(cb:Void->Void):Void;
 	static function before(f:Dynamic, ?params: { } ):Void;
 	static function current():RouterInstance;
-	
+
 	/*static inline function controller():RouteController {
 		return untyped __js__('this');
 	}*/
@@ -62,11 +65,11 @@ extern class RouterInstance {
 @:native('this')
 extern class RouterCtx {
 	static function extend(?opts: RouteOptions):Dynamic;
-	
+
 	static var params:Dynamic; 		// nodejs params object
 	static var request:Dynamic; 	// nodejs request object
 	static var response:Dynamic;	// nodejs response object
-	
+
 	inline static function query():Dynamic {return untyped params.query;}
 	inline static function hash():Dynamic { return untyped params.hash;}
 	static function layout(name:String):Void;

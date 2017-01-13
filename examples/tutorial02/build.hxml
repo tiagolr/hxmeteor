@@ -1,0 +1,12 @@
+-lib hxmeteor
+--each
+
+-cp src/client
+-main Client
+-js www/client/main.js
+
+--next
+
+-cp src/server
+-main Server
+-js www/server/main.js

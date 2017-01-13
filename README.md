@@ -1,9 +1,38 @@
-Externs and tools to build meteor applications using haxe language.
+#haxelib local use
+
+Currently there is no haxelib, but you can use this git repos as a development directory:
+
+```
+haxelib dev hxmeteor path/to/folder
+```
+
+or use git directly
+
+```
+haxelib git hxmeteor https://github.com/MatthijsKamstra/hxmeteor.git
+```
+
+don't forget to add it to your build file
+
+```haxe
+-lib hxmeteor
+```
+
+
+
+updated to Meteor 1.4.2.3.
+
+Haxe > 3.2.0
+
+
+
+
+Externs and tools to build meteor applications using [Haxe](https://www.haxe.org) language.
 
 This is an early version and the externs are not complete, also some of the  workflows/concepts are subject to change.
 
 ##How it works
-Meteor.js has a very specific workflow designed for javascript language, some of its features are slightly modified or workaround when usign haxe.
+Meteor.js has a very specific workflow designed for javascript language, some of its features are slightly modified or workaround when using haxe.
 
 - **File Structuring**
 
@@ -47,7 +76,7 @@ In meteor it's common to assign global variables when creating collections, thes
 Players = new Mongo.Collection("players");
 ```
 
-In haxe its harder to create global variables, a workaround is to assign the collections to the window object.
+In Haxe its harder to create global variables, a workaround is to assign the collections to the window object.
 
 ```haxe
 var collection = new Collection("players");
@@ -55,7 +84,7 @@ untyped js.Browser.window["Players"] = untyped collection._collection;
 ```
 
 ##TODOS
-Some ideas for macros and utilites that may improve the haxe-meteor workflow in the future:
+Some ideas for macros and utilities that may improve the haxe-meteor workflow in the future:
 
 * **Typed Collections** like in [haxe-mongoose externs](https://github.com/clemos/haxe-js-kit/blob/master/test/MongooseTest.hx).
 

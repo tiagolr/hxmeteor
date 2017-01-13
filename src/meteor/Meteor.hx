@@ -44,34 +44,34 @@ typedef ExternalLoginOpts = {
 
 @:native('Meteor')
 extern class Meteor {
-	
+
 	static var isClient(default,null):Bool;
 	static var isServer(default, null):Bool;
 	static var isCordova(default, null):Bool;
 	static var settings(default, null): Dynamic;
 	static var release(default, null):String;
-	
+
 	static function startup(cb:Void->Void):Void;
 	static function wrapAsync(cb:Dynamic->Void, ?ctx:Dynamic):Void;
 	static function absoluteUrl(?path:String, ?options: { ?secure:Bool, replaceLocalhost:Bool, rootUrl:Bool } ):String;
 	static function publish(name:String, func:Dynamic):Dynamic;
-	static function subscribe(name:String, args:Rest<Dynamic>): {stop:Void->Void, ready:Void->Void}; 
+	static function subscribe(name:String, args:Rest<Dynamic>): {stop:Void->Void, ready:Void->Void};
 	static function methods(methods: Dynamic<Function> ):Void;
 	static function call(name:String, args:Rest<Dynamic>):Void;
 	static function apply(name:String, ?args:Array<Dynamic>, ?options:ApplyOptions, ?callback:Dynamic->Dynamic->Void):Void;
-	
+
 	// connections
 	static function status():Status;
 	static function reconnect():Void;
 	static function disconnect():Void;
 	static function onConnect(callback:OnConnect->Void):Void;
-	
-	// timmers
+
+	// timers
 	static function setTimeout(callback:Void->Void, delay:Int):Int;
 	static function setInterval(callback:Void->Void, delay:Int):Int;
 	static function clearTimeout(id:Int):Void;
 	static function clearInterval(id:Int):Void;
-	
+
 	// accounts
 	static function user():User;
 	static function userId():Null<String>;
@@ -79,7 +79,7 @@ extern class Meteor {
 	static function loggingIn():Bool;
 	static function logout(?callback:EitherType<Void->Void, Error->Void>):Void;
 	static function logoutOtherClients(?callback:EitherType<Void->Void, Error->Void>):Void;
-	
+
 	// requires aditional packages accounts-password, accounts-facebook, etc...
 	static function loginWithPassword(user:EitherType<User,String>, password:String, callback:EitherType<Void->Void, Error->Void>):Void;
 	static function loginWithFacebook(opts:ExternalLoginOpts, callback:EitherType<Void->Void, Error->Void>):Void;
@@ -88,12 +88,12 @@ extern class Meteor {
 	static function loginWithTwitter(opts:ExternalLoginOpts, callback:EitherType<Void->Void, Error->Void>):Void;
 	static function loginWithWeibo(opts:ExternalLoginOpts, callback:EitherType<Void->Void, Error->Void>):Void;
 	static function loginWithMeetup(opts:ExternalLoginOpts, callback:EitherType<Void->Void, Error->Void>):Void;
-	
+
 }
 
 @:native('this')
 extern class PublishCtx {
-	
+
 	static var userId(default, null):String;
 	static var connection(default, null):Dynamic;
 	static function added(collection:String, id:String, fields: { } ):Void;
@@ -114,20 +114,22 @@ extern class MethodCtx {
 	static var unBlock(default, null):Bool;
 }
 
+// 'meteor add check'
+// http://stackoverflow.com/questions/33521059/check-is-not-defined-in-meteor-js
 @:native('check')
 extern class Check {
-	@:selfCall public function check(value:Dynamic, pattern:Dynamic):Void;
+	@:selfCall public static function check(value:Dynamic, pattern:Dynamic):Void;
 }
 
 @:native('Match')
 extern class Match {
 	static function test(value:Dynamic, pattern:Dynamic):Bool;
-	
+
 	static function ObjectIncluding( keys:{ } ):Void;
 	static function Optional(pattern:Dynamic):Void;
 	static function OneOf(pattern:Rest<Dynamic>):Void;
 	static function Where(condition:Dynamic->Bool):Void;
-	
+
 	static var Any(default, null):Dynamic;
 	static var Integer(default, null):Dynamic;
 }
