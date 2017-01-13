@@ -29,12 +29,9 @@ AppRouter.init = function() {
 var Client = function() { };
 Client.main = function() {
 	Shared.init();
-	Meteor.subscribe("tasks");
-	window["tasks"] = model_Tasks.collection._collection;
 };
 var Shared = function() { };
 Shared.init = function() {
-	model_Tasks.init();
 	AppRouter.init();
 };
 var model_Tasks = function() { };

@@ -35,7 +35,6 @@ Server.main = function() {
 };
 var Shared = function() { };
 Shared.init = function() {
-	model_Tasks.init();
 	AppRouter.init();
 };
 var model_Tasks = function() { };

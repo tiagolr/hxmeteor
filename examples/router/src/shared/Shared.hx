@@ -4,8 +4,7 @@ import model.Tasks;
 
 class Shared {
 
-    static public function init() {
-		Tasks.init();
+	static public function init() {
 		AppRouter.init();
     }
 }
