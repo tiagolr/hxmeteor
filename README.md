@@ -1,38 +1,19 @@
-#haxelib local use
+# Meteor Haxe Externs
 
-Currently there is no haxelib, but you can use this git repos as a development directory:
-
-```
-haxelib dev hxmeteor path/to/folder
-```
-
-or use git directly
-
-```
-haxelib git hxmeteor https://github.com/MatthijsKamstra/hxmeteor.git
-```
-
-don't forget to add it to your build file
-
-```haxe
--lib hxmeteor
-```
-
-
-
-updated to Meteor 1.4.2.3.
-
-Haxe > 3.2.0
-
-
-
-
-Externs and tools to build meteor applications using [Haxe](https://www.haxe.org) language.
+Externs and tools to build [meteor](https://www.meteor.com/) applications using [Haxe](https://www.haxe.org) language.
 
 This is an early version and the externs are not complete, also some of the  workflows/concepts are subject to change.
 
+Currently up-to-date:
+
+- Meteor 1.4.2.3.
+- Haxe > 3.2.0
+
+
 ##How it works
-Meteor.js has a very specific workflow designed for javascript language, some of its features are slightly modified or workaround when using haxe.
+Meteor.js has a very specific workflow designed for javascript language, some of its features are slightly modified or workaround when using Haxe.
+
+Check out the [example](/examples) folder
 
 - **File Structuring**
 
@@ -105,3 +86,26 @@ Route.route('/', function (ctx:RouterCtx) {
 ```
 
 * **Templates List** showing available templates and type-check them using macros, something like [in this article](http://blog.stroep.nl/2014/01/haxe-macros/).
+
+
+#haxelib local use
+
+Besides using Haxelib, you can use this git repos as a development directory:
+
+```
+haxelib dev hxmeteor path/to/folder
+```
+
+or use git directly
+
+```
+haxelib git hxmeteor https://github.com/MatthijsKamstra/hxmeteor.git
+```
+
+don't forget to add it to your build file
+
+```haxe
+-lib hxmeteor
+```
+
+
