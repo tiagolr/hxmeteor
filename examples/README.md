@@ -2,7 +2,7 @@
 
 This folder contains a couple (default) Meteor examples and the tutorial you find [here](https://www.meteor.com/tutorials/blaze/creating-an-app)
 
-- [helloworld](/helloworld)
+- [helloworld](helloworld)
 - [clock](/clock)
 - [leaderboard](/leaderboard)
 - [template](/template)
