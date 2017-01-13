@@ -116,39 +116,44 @@ The end result is the same!.
 
 ```
 + projectname
+	- build.hxml (build file for Haxe)
+	- package.json (automatic build for Haxe)
 	+ src
 		+ client
 			+ templates
-				- Home.hx
-			- Client.hx
+				- Home.hx (Code specific for 'home' template)
+			- Client.hx (Starting point for client code, will be generate to client.js)
 		+ server
-			- Server.hx
-		+ shared
+			- Server.hx  (Starting point for Server code, will be generate to server.js)
+		+ shared (folder for code shared between client and server)
 			+ model
 				- Model.hx
 			- Shared.hx
 			- AppRouter.hx
-	+ www
+	+ www (export folder for Meteor)
 		+ node_modules
-		+ .meteor
+		+ .meteor (meteor specific folder)
 		+ client
 			+ lib
 				+ css
 				+ js
 			+ style
 				- main.css
-			+ templates
+			+ templates (template folder, not Haxe specific)
 				- home.html
 				- nav.html
 			- client.js (Haxe generated file)
 		+ server
 			- server.js (Haxe generated file)
-		+ public
+		+ public (folder accessable for the client html)
 			+ img
 			+ fonts
-
-
+		- .gitignore (ignore the node_modules)
+		- package.json (npm install)
 ```
+
+The `www` folder is in most tutorials the project folder.
+For Haxe it's the export/deploy folder.
 
 
 
@@ -160,7 +165,7 @@ Open the example folder you want to try in your terminal
 
 `cd path/to/folder`
 
-Build with Haxe and start meteor
+Build with Haxe and start Meteor
 
 ```
 haxe build.hxml
