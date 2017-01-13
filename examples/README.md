@@ -2,25 +2,25 @@
 
 This folder contains a couple (default) Meteor examples and the tutorial you find [here](https://www.meteor.com/tutorials/blaze/creating-an-app)
 
-- [helloworld](/helloworld)
-- [clock](/clock)
-- [leaderboard](/leaderboard)
-- [template](/template)
-- [router](/router)
+- [helloworld](helloworld)
+- [clock](clock)
+- [leaderboard](leaderboard)
+- [template](template)
+- [router](router)
 
 
 These examples follow [this](https://www.meteor.com/tutorials/blaze/creating-an-app) tutorial.
 
-- [tutorial01](/tutorial01) read instructions: [1. Creating an app](https://www.meteor.com/tutorials/blaze/creating-an-app)
-- [tutorial02](/tutorial02) read instructions: [2. Templates](https://www.meteor.com/tutorials/blaze/templates)
-- [tutorial03](/tutorial03) read instructions: [3. Collections](https://www.meteor.com/tutorials/blaze/collections)
-- [tutorial04](/tutorial04) read instructions: [4. Forms and events](https://www.meteor.com/tutorials/blaze/forms-and-events)
-- [tutorial05](/tutorial05) read instructions: [5. Update and remove](https://www.meteor.com/tutorials/blaze/update-and-remove)
-- [tutorial07](/tutorial07) read instructions: [7. Temporary UI state (hack)](https://www.meteor.com/tutorials/blaze/temporary-ui-state)
-- [tutorial07b](/tutorial07b) read instructions: [7. Temporary UI state (using `Session`)](https://www.meteor.com/tutorials/blaze/temporary-ui-state)
-- [tutorial08](/tutorial08) read instructions: [8. Adding user accounts](https://www.meteor.com/tutorials/blaze/adding-user-accounts)
-- [tutorial09](/tutorial09) read instructions: [9. Security with methods](https://www.meteor.com/tutorials/blaze/security-with-methods)
-- [tutorial10](/tutorial10) read instructions: [10. Publish and subscribe](https://www.meteor.com/tutorials/blaze/publish-and-subscribe)
+- [tutorial01](tutorial01) read instructions: [1. Creating an app](https://www.meteor.com/tutorials/blaze/creating-an-app)
+- [tutorial02](tutorial02) read instructions: [2. Templates](https://www.meteor.com/tutorials/blaze/templates)
+- [tutorial03](tutorial03) read instructions: [3. Collections](https://www.meteor.com/tutorials/blaze/collections)
+- [tutorial04](tutorial04) read instructions: [4. Forms and events](https://www.meteor.com/tutorials/blaze/forms-and-events)
+- [tutorial05](tutorial05) read instructions: [5. Update and remove](https://www.meteor.com/tutorials/blaze/update-and-remove)
+- [tutorial07](tutorial07) read instructions: [7. Temporary UI state (hack)](https://www.meteor.com/tutorials/blaze/temporary-ui-state)
+- [tutorial07b](tutorial07b) read instructions: [7. Temporary UI state (using `Session`)](https://www.meteor.com/tutorials/blaze/temporary-ui-state)
+- [tutorial08](tutorial08) read instructions: [8. Adding user accounts](https://www.meteor.com/tutorials/blaze/adding-user-accounts)
+- [tutorial09](tutorial09) read instructions: [9. Security with methods](https://www.meteor.com/tutorials/blaze/security-with-methods)
+- [tutorial10](tutorial10) read instructions: [10. Publish and subscribe](https://www.meteor.com/tutorials/blaze/publish-and-subscribe)
 
 
 # Cheat sheet
