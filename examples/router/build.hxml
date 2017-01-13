@@ -11,3 +11,6 @@
 -cp src/server
 -main Server
 -js www/server/server.js
+
+-cmd echo '-------------------\nHaxe build finished\n-------------------'
+

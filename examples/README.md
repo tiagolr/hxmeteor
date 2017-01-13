@@ -2,14 +2,14 @@
 
 This folder contains a couple (default) Meteor examples and the tutorial you find [here](https://www.meteor.com/tutorials/blaze/creating-an-app)
 
-- [helloworld](helloworld)
+- [helloworld](helloworld) `meteor create simple-todo` example
 - [clock](clock)
 - [leaderboard](leaderboard)
-- [template](template)
-- [router](router)
+- [router](router) IronRouter example with Bootstrap for styling and Haxe autocompile via NPM [onchange](https://www.npmjs.com/package/onchange)
+- [template](template) IronRouter, bootstrap, models, the whole shebang
 
 
-These examples follow [this](https://www.meteor.com/tutorials/blaze/creating-an-app) tutorial.
+The following examples are from [this](https://www.meteor.com/tutorials/blaze/creating-an-app) Meteor tutorial.
 
 - [tutorial01](tutorial01) read instructions: [1. Creating an app](https://www.meteor.com/tutorials/blaze/creating-an-app)
 - [tutorial02](tutorial02) read instructions: [2. Templates](https://www.meteor.com/tutorials/blaze/templates)
@@ -130,7 +130,7 @@ The end result is the same!.
 				- Model.hx
 			- Shared.hx
 			- AppRouter.hx
-	+ www (export folder for Meteor)
+	+ www or bin (export folder for Haxe / root folder for Meteor)
 		+ node_modules
 		+ .meteor (meteor specific folder)
 		+ client
@@ -159,7 +159,7 @@ For Haxe it's the export/deploy folder.
 
 # Build and Run:
 
-All examples follow simular build pattern.
+All examples follow similar build pattern.
 
 Open the example folder you want to try in your terminal
 

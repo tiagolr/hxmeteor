@@ -1,0 +1,13 @@
+{
+  "license": "MIT",
+  "description": "Meteor Haxe example with autocompile",
+  "author": "Matthijs Kamstra aka [mck]",
+  "private": true,
+  "scripts": {
+    "prewatch": "haxe build.hxml",
+    "watch": "onchange '**/*.hx' '**/**/*.hx' '**/**/**/*.hx' -v -- haxe build.hxml"
+  },
+  "devDependencies": {
+    "onchange": "3.2.1"
+  }
+}

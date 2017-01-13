@@ -1,4 +1,4 @@
-##Hxmeteor-template
+##Meteor Haxe router with IronRouter
 
 This template provides a base for building projects using haxe-meteor.
 
@@ -12,7 +12,7 @@ Features:
 
 ```
 ├───src                 ;; haxe source code
-│   ├───client          ;; client-only code  
+│   ├───client          ;; client-only code
 │   │   └───templates   ;; template controllers
 │   ├───server          ;; server-only code
 │   └───shared          ;; client and server code
@@ -36,7 +36,12 @@ Pull Requests and improvements are welcome.
 
 #####Build and Run:
 ```
-haxe build.hxml
+npm install
+npm run watch
+```
+other terminal
+```
 cd www
+meteor npm install
 meteor
 ```
