@@ -7,6 +7,9 @@ import haxe.io.Path;
  * Meteor Iron:Router externs
  * https://github.com/iron-meteor/iron-router
  *
+ * install:
+ * 		meteor add iron:router
+ *
  * @author TiagoLr
  */
 typedef RouterConfigs = {
@@ -74,6 +77,7 @@ extern class RouterCtx {
 	inline static function hash():Dynamic { return untyped params.hash;}
 	static function layout(name:String):Void;
 	static function redirect(path:String):Void;
-	static function render(layoutName:String, ?options: { ?to:String, data:Void->Dynamic } ):Void;
+	static function render(?layoutName:String, ?options: { ?to:String, data:Void->Dynamic } ):Void;
 	static function stop():Void;
+	static function ready():Bool;
 }
