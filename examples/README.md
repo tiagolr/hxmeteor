@@ -5,22 +5,22 @@ This folder contains a couple (default) Meteor examples and the tutorial you fin
 - [helloworld](helloworld) `meteor create simple-todo` example
 - [clock](clock)
 - [leaderboard](leaderboard)
+- [template](template) IronRouter, Bootstrap, models, the whole shebang
 - [router](router) IronRouter example with Bootstrap for styling and Haxe autocompile via NPM [onchange](https://www.npmjs.com/package/onchange)
-- [template](template) IronRouter, bootstrap, models, the whole shebang
 
 
 The following examples are from [this](https://www.meteor.com/tutorials/blaze/creating-an-app) Meteor tutorial.
 
-- [tutorial01](tutorial01) read instructions: [1. Creating an app](https://www.meteor.com/tutorials/blaze/creating-an-app)
-- [tutorial02](tutorial02) read instructions: [2. Templates](https://www.meteor.com/tutorials/blaze/templates)
-- [tutorial03](tutorial03) read instructions: [3. Collections](https://www.meteor.com/tutorials/blaze/collections)
-- [tutorial04](tutorial04) read instructions: [4. Forms and events](https://www.meteor.com/tutorials/blaze/forms-and-events)
-- [tutorial05](tutorial05) read instructions: [5. Update and remove](https://www.meteor.com/tutorials/blaze/update-and-remove)
-- [tutorial07](tutorial07) read instructions: [7. Temporary UI state (hack)](https://www.meteor.com/tutorials/blaze/temporary-ui-state)
+- [tutorial01](tutorial01)  read instructions: [1. Creating an app](https://www.meteor.com/tutorials/blaze/creating-an-app)
+- [tutorial02](tutorial02)  read instructions: [2. Templates](https://www.meteor.com/tutorials/blaze/templates)
+- [tutorial03](tutorial03)  read instructions: [3. Collections](https://www.meteor.com/tutorials/blaze/collections)
+- [tutorial04](tutorial04)  read instructions: [4. Forms and events](https://www.meteor.com/tutorials/blaze/forms-and-events)
+- [tutorial05](tutorial05)  read instructions: [5. Update and remove](https://www.meteor.com/tutorials/blaze/update-and-remove)
+- [tutorial07](tutorial07)  read instructions: [7. Temporary UI state (hack)](https://www.meteor.com/tutorials/blaze/temporary-ui-state)
 - [tutorial07b](tutorial07b) read instructions: [7. Temporary UI state (using `Session`)](https://www.meteor.com/tutorials/blaze/temporary-ui-state)
-- [tutorial08](tutorial08) read instructions: [8. Adding user accounts](https://www.meteor.com/tutorials/blaze/adding-user-accounts)
-- [tutorial09](tutorial09) read instructions: [9. Security with methods](https://www.meteor.com/tutorials/blaze/security-with-methods)
-- [tutorial10](tutorial10) read instructions: [10. Publish and subscribe](https://www.meteor.com/tutorials/blaze/publish-and-subscribe)
+- [tutorial08](tutorial08)  read instructions: [8. Adding user accounts](https://www.meteor.com/tutorials/blaze/adding-user-accounts)
+- [tutorial09](tutorial09)  read instructions: [9. Security with methods](https://www.meteor.com/tutorials/blaze/security-with-methods)
+- [tutorial10](tutorial10)  read instructions: [10. Publish and subscribe](https://www.meteor.com/tutorials/blaze/publish-and-subscribe)
 
 
 # Cheat sheet
@@ -89,11 +89,37 @@ Template.get('body').onCreated(function bodyOnCreated() {
   Reflect.setField(TemplateCtx, 'state', new ReactiveDict() );// generates: this["state"] = new ReactiveDict();
 
   /*
-  just ignore everything, and use untyped JavaScript
+  Ignore everything and use untyped JavaScript
   */
   // untyped __js__('this.state = {0}', new ReactiveDict()); // generates: this.state = new ReactiveDict();
 });
 ```
+
+I ran into something unexpected with the `server` part:
+
+You can use `console.log('foo');` for debugging also on the `server` side.
+But when using the Haxe way on the server it will generate code that will not work.
+
+```javascript
+import js.Browser.console;
+console.log("foo");
+
+// or
+
+js.Browser.console.log("foo");
+
+// Both will generate:
+// window.console.log("foo"); // but on the server there is no `window`
+```
+
+But you can always use the default Haxe log methode
+
+```haxe
+trace('foo');
+// Will generate:
+//console.log('foo');
+```
+
 
 
 # Difference
