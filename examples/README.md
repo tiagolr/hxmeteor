@@ -112,6 +112,18 @@ js.Browser.console.log("foo");
 // window.console.log("foo"); // but on the server there is no `window`
 ```
 
+Why is that? ... well the server is `node.js` so the browser version on console.log will not work.
+Probably the best way would be to add the nodejs externs and use that import.
+
+```
+haxelib install hxnodejs
+// add to build.hxml
+-lib hxnodejs
+// import
+import js.node.console.Console;
+```
+
+
 But you can always use the default Haxe log methode
 
 ```haxe
