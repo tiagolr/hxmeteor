@@ -38,6 +38,10 @@ typedef RouteOptions = {
 	?where:String,  // 'server' or 'client'
 }
 
+typedef RouterInfo = {
+	?getName: Void->String
+}
+
 @:native('Router')
 extern class IronRouter {
 
@@ -48,8 +52,9 @@ extern class IronRouter {
 	@:overload(function(path:String, ?opts:RouteOptions):Void{})
 	static function route(path:String, cb:Dynamic, ?opts:RouteOptions):Dynamic; // TODO return Route with get,set and post methods
 
+	// Example: router.go('itemsShowRoute', {_id: 5}, {hash: 'frag', query: 'string});
 	static function go(path:String, ?params: { }, ?opts: { ?query:String, ?hash:String } ):Void;
-	static function onBeforeAction(cb:Void->Void):Void;
+	static function onBeforeAction(cb:Void->Void, ?opts:{ ?except:Array<String>}):Void;
 	static function onRerun(cb:Void->Void):Void;
 	static function before(f:Dynamic, ?params: { } ):Void;
 	static function current():RouterInstance;
@@ -61,8 +66,7 @@ extern class IronRouter {
 }
 
 extern class RouterInstance {
-	public var route:Dynamic;
-	//function getName():String;
+	public var route:RouterInfo;
 }
 
 @:native('this')
@@ -80,4 +84,5 @@ extern class RouterCtx {
 	static function render(?layoutName:String, ?options: { ?to:String, data:Void->Dynamic } ):Void;
 	static function stop():Void;
 	static function ready():Bool;
+	static function next():Dynamic;
 }
