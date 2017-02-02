@@ -7,8 +7,8 @@ import meteor.Meteor.User;
 typedef CreateUserOptions = {
 	?username:String,
 	?email:String,
-	?password:String, // required on the client
-	profile:{},
+	password:String, // required on the client
+	?profile:{},
 }
 
 typedef EmailFields = {
@@ -73,6 +73,15 @@ typedef ExtraSignupFields = {
 
 /**
  * Accounts
+ *
+ * http://docs.meteor.com/api/passwords.html
+ *
+ * The accounts-password package contains a full system for password-based authentication.
+ * In addition to the basic username and password-based sign-in process,
+ * it also supports email-based sign-in including address verification and password recovery emails.
+ *
+ * `meteor add accounts-password`
+ *
  * @author TiagoLr
  */
 @:native('Accounts')
