@@ -93,7 +93,6 @@ extern class Meteor {
 
 @:native('this')
 extern class PublishCtx {
-
 	static var userId(default, null):String;
 	static var connection(default, null):Dynamic;
 	static function added(collection:String, id:String, fields: { } ):Void;
@@ -133,18 +132,14 @@ extern class Match {
 	static var Any(default, null):Dynamic;
 	static var Integer(default, null):Dynamic;
 
-
-
 	// [mck] little hack for consitancy
 	@:native('Integer') static var Int;
 	// @:native('String') static var String;
 	// @:native('Number') static var Number;
-	// @:native('Boolean') static var Boolean;
+	// @:native('Boolean') static inline var Boolean = untyped 'Boolean';
 	// @:native('Boolean') static var Bool;
 	// @:native('undefined') static var undefined;
 	// static var null():String return untyped null;
-
-
 }
 
 @:native('DDP')

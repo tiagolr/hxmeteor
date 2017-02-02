@@ -3,7 +3,7 @@
 	"url" : "https://github.com/ProG4mr/hxmeteor",
 	"license": "MIT",
 	"tags": ["javascript", "meteor", "isomorphic", "client", "server"],
-	"description": "Bindings and tools to use meteor.js with haxe.",
+	"description": "Bindings and tools to use meteor.js with Haxe.",
 	"version": "0.2.0",
 	"classPath": "src",
 	"releasenote": "More fixes",

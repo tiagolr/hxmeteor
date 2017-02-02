@@ -88,6 +88,9 @@ Route.route('/', function (ctx:RouterCtx) {
 * **Templates List** showing available templates and type-check them using macros, something like [in this article](http://blog.stroep.nl/2014/01/haxe-macros/).
 
 
+* **ES6 modules** output with [modular-js](https://github.com/kevinresol/modular-js)
+
+
 #haxelib local use
 
 Besides using Haxelib, you can use this git repos as a development directory:
