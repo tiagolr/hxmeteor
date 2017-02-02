@@ -81,7 +81,7 @@ extern class Meteor {
 	static function logoutOtherClients(?callback:EitherType<Void->Void, Error->Void>):Void;
 
 	// requires aditional packages accounts-password, accounts-facebook, etc...
-	static function loginWithPassword(user:EitherType<User,String>, password:String, callback:EitherType<Void->Void, Error->Void>):Void;
+	static function loginWithPassword(user:EitherType<User,String>, password:String, ?callback:EitherType<Void->Void, Error->Void>):Void;
 	static function loginWithFacebook(opts:ExternalLoginOpts, callback:EitherType<Void->Void, Error->Void>):Void;
 	static function loginWithGithub(opts:ExternalLoginOpts, callback:EitherType<Void->Void, Error->Void>):Void;
 	static function loginWithGoogle(opts:ExternalLoginOpts, callback:EitherType<Void->Void, Error->Void>):Void;
