@@ -113,7 +113,8 @@ extern class Accounts {
 
 	// requires accounts-password package
 	// `meteor add accounts-password`
-	static function createUser(options:CreateUserOptions, ?callback:EitherType<Void->Void, Error->Dynamic>):String;
+	// static function createUser(options:CreateUserOptions, ?callback:EitherType<Void->Void, Error->Dynamic>):String;
+	static function createUser(options:CreateUserOptions, ?callback:EitherType<Void->Void, Error->Void>):Void;
 	static function setUserName(userId:String, username:String):Void;
 	static function addEmail(userId:String, newEmail:String, ?verified:Bool):Void;
 	static function removeEmail(userId:String, email:String):Void;
