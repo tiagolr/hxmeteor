@@ -1,4 +1,4 @@
-import meteor.packages.Router;
+import meteor.packages.IronRouter;
 
 /**
  * ...
@@ -7,22 +7,22 @@ import meteor.packages.Router;
 class AppRouter {
 
 	static public function init() {
-		Router.configure( {
+		IronRouter.configure( {
 			layoutTemplate:'main',
 			loadingTemplate:'loading',
 		});
-		
-		Router.route("/", function() {
+
+		IronRouter.route("/", function() {
 			RouterCtx.redirect('/one');
 		});
-		
-		Router.route("/one", function() {
+
+		IronRouter.route("/one", function() {
 			RouterCtx.render("pageone");
 		});
-		
-		Router.route("/two", function() {
+
+		IronRouter.route("/two", function() {
 			RouterCtx.render("pagetwo");
 		});
 	}
-	
+
 }

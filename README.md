@@ -1,9 +1,19 @@
-Externs and tools to build meteor applications using haxe language.
+# Meteor Haxe Externs
+
+Externs and tools to build [meteor](https://www.meteor.com/) applications using [Haxe](https://www.haxe.org) language.
 
 This is an early version and the externs are not complete, also some of the  workflows/concepts are subject to change.
 
+Currently up-to-date:
+
+- Meteor 1.4.2.3.
+- Haxe > 3.2.0
+
+
 ##How it works
-Meteor.js has a very specific workflow designed for javascript language, some of its features are slightly modified or workaround when usign haxe.
+Meteor.js has a very specific workflow designed for javascript language, some of its features are slightly modified or workaround when using Haxe.
+
+Check out the [example](/examples) folder
 
 - **File Structuring**
 
@@ -47,7 +57,7 @@ In meteor it's common to assign global variables when creating collections, thes
 Players = new Mongo.Collection("players");
 ```
 
-In haxe its harder to create global variables, a workaround is to assign the collections to the window object.
+In Haxe its harder to create global variables, a workaround is to assign the collections to the window object.
 
 ```haxe
 var collection = new Collection("players");
@@ -55,7 +65,7 @@ untyped js.Browser.window["Players"] = untyped collection._collection;
 ```
 
 ##TODOS
-Some ideas for macros and utilites that may improve the haxe-meteor workflow in the future:
+Some ideas for macros and utilities that may improve the haxe-meteor workflow in the future:
 
 * **Typed Collections** like in [haxe-mongoose externs](https://github.com/clemos/haxe-js-kit/blob/master/test/MongooseTest.hx).
 
@@ -76,3 +86,29 @@ Route.route('/', function (ctx:RouterCtx) {
 ```
 
 * **Templates List** showing available templates and type-check them using macros, something like [in this article](http://blog.stroep.nl/2014/01/haxe-macros/).
+
+
+* **ES6 modules** output with [modular-js](https://github.com/kevinresol/modular-js)
+
+
+#haxelib local use
+
+Besides using Haxelib, you can use this git repos as a development directory:
+
+```
+haxelib dev hxmeteor path/to/folder
+```
+
+or use git directly
+
+```
+haxelib git hxmeteor https://github.com/MatthijsKamstra/hxmeteor.git
+```
+
+don't forget to add it to your build file
+
+```haxe
+-lib hxmeteor
+```
+
+

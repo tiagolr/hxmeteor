@@ -6,5 +6,6 @@ Haxe version of meteor default template.
 ```
 haxe build.hxml
 cd www
+meteor npm install
 meteor
 ```

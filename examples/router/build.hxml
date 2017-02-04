@@ -1,0 +1,16 @@
+-lib hxmeteor
+-cp src/shared
+--each
+
+-cp src/client
+-main Client
+-js www/client/client.js
+
+--next
+
+-cp src/server
+-main Server
+-js www/server/server.js
+
+-cmd echo '-------------------\nHaxe build finished\n-------------------'
+
